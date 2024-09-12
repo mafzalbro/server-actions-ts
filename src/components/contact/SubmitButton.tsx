@@ -16,11 +16,11 @@ const SubmitButton = ({className, searchParams}: ButtonProps) => {
   const router = useRouter()
   const { pending } = useFormStatus()
 
-  useEffect(()=> {
-    setTimeout(() => {
-      router.push('/contact')
-    }, 2000);
-  }, [pending])
+  // useEffect(()=> {
+  //   setTimeout(() => {
+  //     router.push('/contact')
+  //   }, 2000);
+  // }, [pending])
   
   const success = searchParams.success
   

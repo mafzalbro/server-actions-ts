@@ -15,23 +15,23 @@ const SentPage = () => {
   useEffect(() => {
     window.location !== null && 
     setTimeout(() => {
-      router.push('/contact')
+      router.push('/')
     }, 2000);
   }, [path])
     
 
-  if(path !== '/contact')
+  if(path !== '/')
     return (
       <div>
       
     <Alert variant='default'>
       <AlertTitle>
-        <Link href={'/contact'}>
+        <Link href={'/'}>
         <ChevronLeftIcon className="mr-2 inline-block" /> Back
         </Link>
         </AlertTitle>
       <AlertDescription>
-        <div className='text-green-500 p-10'>Your Message have been sent successfully!</div>
+        <div className='text-green-500 p-10'>You have been successfully subscribed!</div>
       </AlertDescription>
     </Alert>
 

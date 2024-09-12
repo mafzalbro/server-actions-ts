@@ -14,11 +14,11 @@ interface AboutProps {
   searchParams: {
     city: string,
     home: string,
-    index: string
+    srNo: string
   }
 }
 
-const AboutPage = ({searchParams: {city, home, index}}: AboutProps) => {
+const AboutPage = ({searchParams: {city, home, srNo}}: AboutProps) => {
 
   const table = [
     {
@@ -68,7 +68,7 @@ const AboutPage = ({searchParams: {city, home, index}}: AboutProps) => {
     <>
     <div className="mb-20">
     <h2 className="text-3xl mb-4 inline-block">Practice of Link and searchParams in NextJS</h2>
-    <p>Click any table entry and see it got highlighted and search paramters added in URL!</p>
+    <p>Click any table entry and see it got highlighted and search paramters added in URL! <span>You can check by selecting one item and refresh that page! it persists highlight due to params in URL</span></p>
     </div>
       <Table>
         <TableCaption>A list of user addresses.</TableCaption>
@@ -81,22 +81,22 @@ const AboutPage = ({searchParams: {city, home, index}}: AboutProps) => {
         </TableHeader>
         <TableBody>
             {table.map((row, i) => {              
-                    return <TableRow key={row.home + i}>
-                        <TableCell className={`${(i === parseInt(index)) ? 'bg-black text-white' : ''}`}>
-                          {i}
+                    return <TableRow key={i}>
+                        <TableCell className={`${(i === parseInt(srNo) - 1) ? 'bg-black text-white' : ''}`}>
+                          {i + 1}
                           </TableCell>
-                        <TableCell className={`${(home == row.home && i === parseInt(index)) ? 'bg-black text-white' : ''}`}>
+                        <TableCell className={`${(home == row.home && i === parseInt(srNo) - 1) ? 'bg-black text-white' : ''}`}>
                           <Link href={{
                             pathname: '/about',
-                            query: {home: row.home, index: i}
+                            query: {home: row.home, srNo: i + 1}
                           }} passHref className="block w-full h-full">
                           {row.home}
                           </Link>
                           </TableCell>
-                        <TableCell className={`${(city == row.city &&  i === parseInt(index)) ? 'bg-black text-white' : ''}`}>
+                        <TableCell className={`${(city == row.city &&  i === parseInt(srNo) - 1) ? 'bg-black text-white' : ''}`}>
                         <Link href={{
                             pathname: '/about',
-                            query: {city: row.city, index: i}
+                            query: {city: row.city, srNo: i + 1}
                           }} passHref className="block w-full h-full">
                           {row.city}
                           </Link>

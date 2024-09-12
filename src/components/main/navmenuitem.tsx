@@ -16,10 +16,11 @@ interface MenuItemProp {
 }
 
 export default function NavMenuItem({menuItem, i}: MenuItemProp) {
-  const path = usePathname()  
+  const path = usePathname()
+
   return (
-            <NavigationMenuItem key={i + menuItem.name}>
-              <Link href={menuItem.link} className={`${navigationMenuTriggerStyle()} ${path.includes(menuItem.link) && menuItem.name !== 'Home' ? 'font-semi-bold bg-slate-50' : ''}`}>
+    <NavigationMenuItem key={i + menuItem.name}>
+              <Link href={menuItem.link} className={`${navigationMenuTriggerStyle()} ${((path.includes(menuItem.link) && menuItem.name !== 'Home') || (path === '/' && menuItem.link === '/')) ? 'font-bold border border-gray-600' : ''}`}>
                 {menuItem.name}
               </Link>
             </NavigationMenuItem>

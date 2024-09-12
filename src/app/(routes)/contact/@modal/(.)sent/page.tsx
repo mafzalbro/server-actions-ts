@@ -35,7 +35,7 @@ const SentPage = () => {
 
         </AlertTitle>
       <AlertDescription>
-        <div className='text-green-400 py-20'>Your Message have been sent successfully!</div>
+        <div className='text-green-500 py-20'>Your Message have been sent successfully!</div>
       </AlertDescription>
     </Alert>
 
