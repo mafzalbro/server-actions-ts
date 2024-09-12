@@ -25,7 +25,7 @@ export function NavMenu() {
   return (
     <NavigationMenu className="text-center m-4 p-2">
     <NavigationMenuList className="gap-2">
-      {menuItems.map((menuItem, i) => <NavMenuItem menuItem={menuItem} i={i} />)}
+      {menuItems.map((menuItem, i) => <NavMenuItem menuItem={menuItem} key={i} i={i}/>)}
         {/* <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
         <NavigationMenuContent>
           <NavigationMenuLink>Link</NavigationMenuLink>

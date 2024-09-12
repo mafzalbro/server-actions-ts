@@ -18,7 +18,7 @@ const Testimonials = () => {
             transition={{ delay: 0.2 * index, duration: 0.5 }}
           >
             <p className="text-lg italic">
-              "This service has completely transformed my workflow!"
+              This service has completely transformed my workflow!
             </p>
             <p className="mt-4 text-sm">- {name}</p>
           </motion.div>

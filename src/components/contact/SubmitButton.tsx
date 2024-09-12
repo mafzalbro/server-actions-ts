@@ -1,7 +1,7 @@
 "use client"
 
-import { useRouter } from "next/navigation"
-import { useEffect } from "react"
+// import { useRouter } from "next/navigation"
+// import { useEffect } from "react"
 import { useFormStatus } from "react-dom"
 import { Button } from "../ui/button"
 
@@ -13,7 +13,7 @@ export interface ButtonProps {
 }
 
 const SubmitButton = ({className, searchParams}: ButtonProps) => {
-  const router = useRouter()
+  // const router = useRouter()
   const { pending } = useFormStatus()
 
   // useEffect(()=> {

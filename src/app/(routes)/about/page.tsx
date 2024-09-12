@@ -66,7 +66,7 @@ const AboutPage = ({searchParams: {city, home, srNo}}: AboutProps) => {
 
   return (
     <>
-    <div className="mb-20">
+    <div className="mb-20 text-center">
     <h2 className="text-3xl mb-4 inline-block">Practice of Link and searchParams in NextJS</h2>
     <p>Click any table entry and see it got highlighted and search paramters added in URL! <span>You can check by selecting one item and refresh that page! it persists highlight due to params in URL</span></p>
     </div>
@@ -82,10 +82,10 @@ const AboutPage = ({searchParams: {city, home, srNo}}: AboutProps) => {
         <TableBody>
             {table.map((row, i) => {              
                     return <TableRow key={i}>
-                        <TableCell className={`${(i === parseInt(srNo) - 1) ? 'bg-black text-white' : ''}`}>
+                        <TableCell className={`${(i === parseInt(srNo) - 1) ? 'bg-slate-800 text-white' : ''}`}>
                           {i + 1}
                           </TableCell>
-                        <TableCell className={`${(home == row.home && i === parseInt(srNo) - 1) ? 'bg-black text-white' : ''}`}>
+                        <TableCell className={`${(home == row.home && i === parseInt(srNo) - 1) ? 'bg-slate-800 text-white' : ''}`}>
                           <Link href={{
                             pathname: '/about',
                             query: {home: row.home, srNo: i + 1}
@@ -93,7 +93,7 @@ const AboutPage = ({searchParams: {city, home, srNo}}: AboutProps) => {
                           {row.home}
                           </Link>
                           </TableCell>
-                        <TableCell className={`${(city == row.city &&  i === parseInt(srNo) - 1) ? 'bg-black text-white' : ''}`}>
+                        <TableCell className={`${(city == row.city &&  i === parseInt(srNo) - 1) ? 'bg-slate-800 text-white' : ''}`}>
                         <Link href={{
                             pathname: '/about',
                             query: {city: row.city, srNo: i + 1}

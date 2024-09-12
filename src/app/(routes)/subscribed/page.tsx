@@ -17,7 +17,7 @@ const SentPage = () => {
     setTimeout(() => {
       router.push('/')
     }, 2000);
-  }, [path])
+  }, [path, router])
     
 
   if(path !== '/')

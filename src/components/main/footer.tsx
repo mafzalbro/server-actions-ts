@@ -1,7 +1,6 @@
 "use client"
 
 import Link from 'next/link'
-import { ModeToggle } from './darkmode'
 import { HeartFilledIcon } from '@radix-ui/react-icons'
 
 const Footer = () => {

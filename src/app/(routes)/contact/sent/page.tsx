@@ -17,7 +17,7 @@ const SentPage = () => {
     setTimeout(() => {
       router.push('/contact')
     }, 2000);
-  }, [path])
+  }, [path, router])
     
 
   if(path !== '/contact')

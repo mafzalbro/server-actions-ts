@@ -1,5 +1,6 @@
 import BlogSection from "@/components/home/blogs";
 import CardSection from "@/components/home/cards";
+import SubmitButton from "@/components/home/subscribe";
 import Testimonials from "@/components/home/testimonials";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,7 +42,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold">Subscribe to Our Newsletter</h2>
           <form className="mt-4 flex space-x-2" action={subscribe}>
             <Input type="email" placeholder="Your email" className="w-full" />
-            <Button>Subscribe</Button>
+            <SubmitButton />
           </form>
         </section>
 

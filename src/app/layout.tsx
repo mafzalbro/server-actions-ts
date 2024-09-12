@@ -37,7 +37,7 @@ export default function RootLayout({
        {/* <MenuBar /> */}
 
        <NavMenu />
-       <main className="p-4 py-8 min-h-96 flex flex-col justify-center items-center">
+       <main className="p-4 md:p-10 py-8 min-h-96 flex flex-col justify-center items-center">
        <ThemeProvider
             attribute="class"
             defaultTheme="dark"
