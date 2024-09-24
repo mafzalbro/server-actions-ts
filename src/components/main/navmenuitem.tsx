@@ -20,7 +20,7 @@ export default function NavMenuItem({menuItem, i}: MenuItemProp) {
 
   return (
     <NavigationMenuItem key={i + menuItem.name}>
-              <Link href={menuItem.link} className={`${navigationMenuTriggerStyle()} ${((path.includes(menuItem.link) && menuItem.name !== 'Home') || (path === '/' && menuItem.link === '/')) ? 'font-bold border border-gray-600' : ''}`}>
+              <Link href={menuItem.link} className={`${navigationMenuTriggerStyle()} ${((path.includes(menuItem.link) && menuItem.name !== 'Home') || (path === '/' && menuItem.link === '/')) ? 'font-bold text-primary' : 'text-muted-foreground'}`}>
                 {menuItem.name}
               </Link>
             </NavigationMenuItem>
